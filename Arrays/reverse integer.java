@@ -6,8 +6,10 @@ class Solution {
             int digit = x % 10;   // get last digit
             rev = rev * 10 + digit; // add to reverse
             x = x / 10;  // remove last digit
-        }
+        }if(rev>Integer.MAX_VALUE || rev<Integer.MIN_VALUE)return 0;
+        return (int)rev;
 
-        return rev;
+
+        
     }
 }
